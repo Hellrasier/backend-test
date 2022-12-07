@@ -1,4 +1,8 @@
 # Express server API with users (crud) and topics (crud)
+## Setup
+For now to start using application, up docker-compose, then inside the api container you sould run commands
+`npm run migrate:latest`
+`npm run seed:run`
 
 ## Authorization
 
