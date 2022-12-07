@@ -1,6 +1,6 @@
 const CreateUserParams = {
   login: 'string',
-  password: 'string',
+  password: { type: 'string', length: { min: 10 }},
   firstname: 'string',
   surname: 'string',
   role: { enum: ['admin', 'user'] },
