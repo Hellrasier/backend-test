@@ -39,8 +39,9 @@ module.exports = (usersService) => ({
 
   'delete': {
     params: { id: 'number' },
-    handler: ({ id }) => {
-      return usersService.deleteUser(id)
+    handler: async ({ id }) => {
+      await usersService.deleteUser(id)
+      return "ok"
     }
   }
 })

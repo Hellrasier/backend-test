@@ -21,7 +21,11 @@ exports.up = function(knex) {
       table.increments('id')
       table.string('name')
       table.string('contents', 10000)
-      table.integer('author').unsigned().references('id').inTable('users')
+      table.integer('author')
+        .unsigned()
+        .references('id')
+        .inTable('users')
+        .onDelete('CASCADE')
       table.datetime('created_at').defaultTo(knex.fn.now())
     })
 };
