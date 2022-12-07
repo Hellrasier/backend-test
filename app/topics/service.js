@@ -52,7 +52,7 @@ class TopicsService {
   }
 
   async getAllTopics({from, to}) {
-    const query = this.db.from('topics')
+    let query = this.db.from('topics')
     
     if(from) query = query.andWhere('created_at', '>', from)
     if (to) query = query.andWhere('created_at', '<', to)

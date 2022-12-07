@@ -3,8 +3,8 @@ const CreateUserParams = {
   password: 'string',
   firstname: 'string',
   surname: 'string',
-  role: 'string',
-  department: 'string',
+  role: { enum: ['admin', 'user'] },
+  department: { enum: ['IT', 'office', 'administration'] },
   position: '?string'
 }
 
@@ -14,7 +14,7 @@ const UpdateUserParams = {
   password: '?string',
   firstname: '?string',
   surname: '?string',
-  department: '?string',
+  department: { enum: ['IT', 'office', 'administration'] },
   position: '?string'
 }
 
